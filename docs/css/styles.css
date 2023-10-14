@@ -8,10 +8,14 @@ main {
   padding: 20% 0;
 }
 
+p {
+  margin: 1rem;
+}
+
 #dateNow {
   font-size: 1rem;
 }
 
-#WeekNumber {
+#weekNumber {
   font-size: 3rem;
 }
