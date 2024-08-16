@@ -51,7 +51,9 @@
     function dateComponent() {
       return {
         currentDate: '',
+
         weekNumber: '',
+
         init() {
           const today = new Date();
           this.currentDate = today.toLocaleDateString("en-GB", {
@@ -67,9 +69,7 @@
         },
 
         getWeekNumber(dt) {
-          const momentDate = moment(dt);
-
-          return momentDate.isoWeek();
+          return moment(dt).isoWeek();
         }
       }
     }
