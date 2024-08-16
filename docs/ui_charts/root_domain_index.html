@@ -42,7 +42,7 @@
 <body>
   <div class="container" x-data="dateComponent()">
     <p><span x-text="currentDate"></span></p>
-    <p>Week <span x-text="weekNumber"></span></p>
+    <p><span x-text="weekNumber" style="font-size: 2rem;"></span></p>
   </div>
 
   <script>
@@ -65,12 +65,12 @@
             year: 'numeric',
             timeZoneName: "short",
           });
-          this.weekNumber = this.getWeekNumber(today);
+
+          const yearShort = today.toLocaleDateString("en-GB", { year: "2-digit" });
+          const isoWeek = moment(today).isoWeek();
+          this.weekNumber = `${yearShort}${isoWeek}.${today.getDay()}`;
         },
 
-        getWeekNumber(dt) {
-          return moment(dt).isoWeek();
-        }
       }
     }
   </script>
