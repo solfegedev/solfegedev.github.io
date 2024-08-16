@@ -1,0 +1,85 @@
+<!-- Will be swapped with the root index -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" crossorigin href="https://pics.freeicons.io/uploads/icons/png/17575416271719489518-512.png" />
+  <title>Root</title>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #dbeafe;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    p:first-child {
+      margin-top: 0
+    }
+
+    p:last-child {
+      margin-bottom: 0
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" x-data="dateComponent()">
+    <p><span x-text="currentDate"></span></p>
+    <p>Week <span x-text="weekNumber"></span></p>
+  </div>
+
+  <script>
+    function dateComponent() {
+      return {
+        currentDate: '',
+        weekNumber: '',
+        init() {
+          const today = new Date();
+          this.currentDate = today.toLocaleDateString("en-GB", {
+            hour: "2-digit",
+            minute: "2-digit",
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            timeZoneName: "short",
+          });
+          this.weekNumber = this.getWeekNumber(today);
+        },
+
+        getWeekNumber(d) {
+          // Copy date so don't modify original
+          d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+          // Set to nearest Thursday: current date + 4 - current day number
+          // Make Sunday's day number 7
+          d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+          // Get first day of year
+          const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+          // Calculate full weeks to nearest Thursday
+          const weekNumber = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+          // Return array of year and week number
+          return weekNumber;
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
