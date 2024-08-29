@@ -1,1 +1,0 @@
-import{c as o,j as t}from"./client-B8KsQLkO.js";import{M as r}from"./Main-CzAkIDLO.js";import e from"https://cdn.jsdelivr.net/npm/react@18.3.1/+esm";import"./Button-B-gMLJ8j.js";import"https://cdn.jsdelivr.net/npm/react-dom@18.3.1/+esm";import"./utils-BHUU43VM.js";o.createRoot(document.getElementById("root")).render(t.jsx(e.StrictMode,{children:t.jsx(r,{})}));
