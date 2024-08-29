@@ -1,0 +1,1 @@
+import*as t from"https://cdn.jsdelivr.net/npm/react@18.3.1/+esm";function i(n,r){let e=0;return t.Children.map(n,a=>t.isValidElement(a)?r(a,e++):a)}function m(n,r){return t.Children.toArray(n).some(e=>t.isValidElement(e)&&e.type===r)}export{m as h,i as m};
