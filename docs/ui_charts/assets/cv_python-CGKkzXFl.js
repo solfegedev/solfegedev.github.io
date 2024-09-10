@@ -1,5 +1,6 @@
-import{j as e,c}from"./client-B8KsQLkO.js";import d from"https://cdn.jsdelivr.net/npm/react@18.3.1/+esm";import{p as a}from"./index-DOpnoZj2.js";import{B as u}from"./Button-Dbum-Du3.js";import"https://cdn.jsdelivr.net/npm/react-dom@18.3.1/+esm";const n={fullname:"Sebastien N. Scarwell",jobTitle:"Python Developer / SDET",address:"Hitchin, SG4 9UJ",email:"seb.scarwell@gmail.com",phone:"+44 (0)7413928068",nationality:"French/EU national with UK ILR",profileLines:["Senior Software Engineer with extensive experience in <b>Python</b>","Previous roles as <b>Developer</b> and <b>SDET</b> (Developer in Test)","MSc in Telecoms & Digital Signal Processing (DSP)"],skills:{Development:"extensive use of <b>Python</b>, <b>C#</b>, <b>C/C++</b>. Use of <b>TypeScript</b>/JavaScript",Scripting:"extensive use of Python, shell scripting (bash), Perl, make…","Version Control":"extensive use of <b>GIT</b>, Subversion (SVN)","Devops CI/CD":"<b>Docker</b>, <b>Ansible</b>, Fabric (python/shell over SSH), Jenkins, Bamboo, Gitlab",Backend:"FastAPI, SQLAlchemy, MongoDB, Kafka, Celery, RabbitMQ, MQTT, Scrapy","Web UI":"<b>React</b>, Bootstrap, Chart.js",Tests:"Pytest, Behave, Robot Framework, Selenium, Playwright"},jobs:[{jobTitle:"SDET",company:"Vodafone",location:"Newbury, UK",sector:"Telecoms",date:"1.5y contracts: Jan 2023 - Jun 2024",content:`Part of the Middleware team, with BDD Test Framework using Python <b>Behave</b>, running on
-contracts kubernetes clusters on AWS. Tasks included:
+import{j as e,c}from"./client-B8KsQLkO.js";import d from"https://cdn.jsdelivr.net/npm/react@18.3.1/+esm";import{p as a}from"./index-DOpnoZj2.js";import{B as u}from"./Button-Dbum-Du3.js";import"https://cdn.jsdelivr.net/npm/react-dom@18.3.1/+esm";const n={fullname:"Sebastien N. Scarwell",jobTitle:"Python Developer / SDET",address:"Hitchin, SG4 9UJ",email:"seb.scarwell@gmail.com",phone:"+44 (0)7413928068",nationality:"French/EU national with UK ILR",profileLines:["Senior Software Engineer with extensive experience in <b>Python</b>","Previous roles as <b>Developer</b> and <b>SDET</b> (Developer in Test)","MSc in Telecoms & Digital Signal Processing (DSP)"],skills:{Development:"extensive use of <b>Python</b>, <b>C#</b>, <b>C/C++</b>. Use of <b>TypeScript</b>/JavaScript",Scripting:"extensive use of Python, shell scripting (bash), Perl, make…","Version Control":"extensive use of <b>GIT</b>, Subversion (SVN)","Devops CI/CD":"<b>Docker</b>, <b>Ansible</b>, Fabric (python/shell over SSH), Jenkins, Bamboo, Gitlab",Backend:"FastAPI, SQLAlchemy, MongoDB, Kafka, Celery, RabbitMQ, MQTT, Scrapy","Web UI":"<b>React</b>, Bootstrap, Chart.js",Tests:"Pytest, Behave, Robot Framework, Selenium, Playwright"},jobs:[{jobTitle:"SDET",company:"Vodafone",location:"Newbury, UK",sector:"Telecoms",date:"1.5y contracts: Jan 2023 - Jun 2024",content:`
+Part of the Middleware team, with BDD Test Framework using Python <b>Behave</b>,
+running on kubernetes clusters on AWS. Tasks included:
 <ul>
 
   <li>Development of Test Automation Framework features: implemented our REST API client
@@ -16,7 +17,8 @@ services (API / Kafka / MongoDB), Pydantic validation, code coverage and Allure 
 tests for new features. Also bug-fixing issues with our regression tests and Gitlab CI/CD
 pipelines.</li>
 
-</ul>`},{jobTitle:"QA Automation Engineer",company:"Citrix R&D",location:"Cambridge, UK",sector:"Hypervisor",date:"3m contract: Oct 2022 - Dec 2022",content:`Part of the QA team in the Xen Hypervisor department. Tasks included:
+</ul>`},{jobTitle:"QA Automation Engineer",company:"Citrix R&D",location:"Cambridge, UK",sector:"Hypervisor",date:"3m contract: Oct 2022 - Dec 2022",content:`
+Part of the QA team in the Xen Hypervisor department. Tasks included:
 <ul>
 
   <li>Improving our Python test automation framework: added OCR functionality to extract and
@@ -25,8 +27,8 @@ typing issues...</li>
 
   <li>Developing automated end to end tests using Python.</li>
 
-</ul>`},{jobTitle:"Senior SDET",company:"WorkDay",location:"London, UK",sector:"HR/Workforce Analytics",date:"1y contracts: Sep 2021 - Sep 2022",content:`Part of the SDET team in the Augmented Analytics
-contracts department. Tasks included:
+</ul>`},{jobTitle:"Senior SDET",company:"WorkDay",location:"London, UK",sector:"HR/Workforce Analytics",date:"1y contracts: Sep 2021 - Sep 2022",content:`
+Part of the SDET team in the Augmented Analytics department. Tasks included:
 <ul>
 
   <li>Develop automated end to end tests for our new features, using <b>Python</b> and <b>Robot
@@ -40,15 +42,16 @@ issues in JIRA or update our end to end tests accordingly.</li>
   <li>Release Manager (alternating weekly with other SDET team members): in charge of our
 weekly release and patches going to customers.</li>
 
-</ul>`},{jobTitle:"Senior Test Engineer",company:"Sky",location:"London, UK",sector:"Set-Top Boxes",date:"contracts: May 2021 - Sep 2021",content:`Part of a scrum team with 4 developers and 3 QA. Developed automated tests using Python and
-PyTest/Allure for:
+</ul>`},{jobTitle:"Senior Test Engineer",company:"Sky",location:"London, UK",sector:"Set-Top Boxes",date:"contracts: May 2021 - Sep 2021",content:`
+Part of a scrum team with 4 developers and 3 QA. Developed automated tests using Python and PyTest/Allure for:
 <ul>
 
   <li>our Product Analytic REST API (tracking user interaction with the box).</li>
 
   <li>our QT based UI (which also involved recording/mocking data from multiple REST APIs).</li>
 
-</ul>`},{jobTitle:"SDET / Automation",company:"Entrust",location:"Cambridge, UK",sector:"Cryptography",date:"5.5y contracts: 2014/16, 2017/19, 2020/21",content:`Formerly Thales e-Security, and nCipher Security, now Entrust (Data Protection Solutions division).
+</ul>`},{jobTitle:"SDET / Automation",company:"Entrust",location:"Cambridge, UK",sector:"Cryptography",date:"5.5y contracts: Aug14-Jul16 May17-Dec19 Jul20-Apr21",content:`
+Formerly Thales e-Security, and nCipher Security, now Entrust (Data Protection Solutions division).
 Was part of the Verification/Validation and CI/CD team, working in an Agile/SAFe environment, on
 nCipher HSM (Hardware Security Module). Tasks included:
 <ul>
@@ -83,7 +86,8 @@ generate certificates required by our servers, combine and simplify information 
 third-party APIs like Device42 (keeping track of servers' OS, IP…) and Artifactory (binary
 repository).</li>
 
-</ul>`},{jobTitle:"Python Developer",company:"Audio Analytic",location:"Cambridge, UK",sector:"Audio detection",date:"7m contracts: Nov 2016 - May 2017",content:`Start-up specialising in machine learning algorithms for sound recognition (targeting Smart Homes). Developed in a Linux environment (Ubuntu) for Linux targets (Raspberry pi):
+</ul>`},{jobTitle:"Python Developer",company:"Audio Analytic",location:"Cambridge, UK",sector:"Audio detection",date:"7m contracts: Nov 2016 - May 2017",content:`
+Start-up specialising in machine learning algorithms for sound recognition (targeting Smart Homes).
 <ul>
 
   <li>Developed a RESTful API (using <b>Flask-RESTful</b>) with ZeroMQ communication to the algorithms
