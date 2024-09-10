@@ -8,7 +8,7 @@ running on kubernetes clusters on AWS. Tasks included:
 our API validation by using <b>Pydantic</b> models (auto-generated from OpenAPI definitions),
 optimised our Protobuf/JSON Kafka client, implemented logger using Behave formatters for
 consistent error reporting (later used by other teams/projects), integrated Behavex to run
-multiple instances of Behave in parallel...</li>
+multiple instances of Behave in parallel…</li>
 
   <li>Setup pytest unit tests (for our <b>FastAPI</b> based stub microservice) with mocked external
 services (API / Kafka / MongoDB), Pydantic validation, code coverage and Allure reports.</li>
@@ -23,7 +23,7 @@ Part of the QA team in the Xen Hypervisor department. Tasks included:
 
   <li>Improving our Python test automation framework: added OCR functionality to extract and
 compare text from screenshots, updated Docker images used by Jenkins, fixed mypy python
-typing issues...</li>
+typing issues…</li>
 
   <li>Developing automated end to end tests using Python.</li>
 
@@ -122,6 +122,6 @@ profiling was done using Visual Studio.</li>
 generating impaired input data to exercise Agilent VSA and our own DLLs.</li>
 
 </ul>`}],workExtra:`
-Similar DSP development work (details upon request):
+Similar DSP software development work (details upon request):
 Ericsson (Sweden), Texas Instruments (France), Toshiba.
 `,education:[{jobTitle:"5yr-MSc Telecoms & Digital Signal Processing",company:"ESIEE-Paris",location:"France",date:"1999",content:"equivalent"},{jobTitle:"MSc Telecoms",company:"King's College London",location:"UK",date:"1998",content:"non-award exchange student"},{jobTitle:"Postgraduate Diploma in Management Studies",location:"bucks.ac.uk",date:"2002",content:"part-time"}]},m=()=>{const t=n.fullname.split(" ").at(-1);return document.title=`CV_${t}_Python`,e.jsxs(e.Fragment,{children:[e.jsxs("header",{className:"x-no-print",children:[e.jsx(u,{variant:"primary",onClick:()=>window.print(),style:{padding:"0 0.4rem"},children:"Print"}),e.jsxs("p",{children:["Note: Click ",e.jsx("strong",{children:"Print"}),", ",e.jsx("strong",{children:"Save as PDF"}),", then expand"," ",e.jsx("strong",{children:"More settings"}),", set ",e.jsx("strong",{children:"Margins = Custom"})," (adjust 20mm each side), and tick ",e.jsx("strong",{children:"Background graphics"}),"."]})]}),e.jsxs("main",{children:[e.jsx("p",{className:"x-colored",style:{fontSize:"1.4rem"},children:n.fullname}),e.jsx("p",{className:"x-colored",style:{margin:"0.4rem auto"},children:n.jobTitle}),e.jsx("p",{children:[n.address,n.email,n.phone,n.nationality].join(" ♦ ")}),e.jsx(r,{children:"Profile"}),e.jsx("ul",{children:n.profileLines.map((o,i)=>e.jsx("li",{children:a(o)},i))}),e.jsx(r,{children:"Skills"}),e.jsx("ul",{children:Object.entries(n.skills).map((o,i)=>{const[s,l]=o;return e.jsxs("li",{children:[e.jsx("u",{children:s}),": ",a(l)]},i)})}),e.jsx(r,{children:"Work Experience"}),n.jobs.map((o,i)=>e.jsx(p,{item:o},i)),e.jsx("p",{style:{textAlign:"left",marginTop:"0.6rem"},children:n.workExtra}),e.jsx(r,{children:"Education"}),n.education.map((o,i)=>e.jsx(h,{item:o},i))]})]})},r=t=>e.jsx("p",{className:"x-section",children:t.children}),p=({item:t})=>e.jsxs(e.Fragment,{children:[e.jsxs("div",{style:{textAlign:"left",marginTop:"0.6rem"},children:[e.jsx("span",{className:"x-title",children:t.jobTitle}),"."," ",e.jsx("span",{className:"x-company",children:t.company}),", ",t.location,". (",t.sector,")",e.jsx("span",{className:"x-date",children:t.date})]}),e.jsx("div",{style:{textAlign:"justify"},children:a(t.content)})]}),h=({item:t})=>e.jsxs("div",{style:{textAlign:"left",marginTop:"0.2rem"},children:[e.jsx("span",{className:"x-title",children:t.jobTitle})," ",t.content,"."," ",t.company&&e.jsxs(e.Fragment,{children:[e.jsx("span",{className:"x-company",children:t.company}),","," "]}),t.location,e.jsx("span",{className:"x-date",children:t.date})]});c.createRoot(document.getElementById("root")).render(e.jsx(d.StrictMode,{children:e.jsx(m,{})}));
