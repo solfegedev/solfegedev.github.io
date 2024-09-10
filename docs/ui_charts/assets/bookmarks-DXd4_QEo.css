@@ -1,0 +1,1 @@
+html{min-width:0}*,*:before,*:after{box-sizing:border-box;min-width:inherit}body{background-color:#e5f0ff;font-family:sans-serif;text-align:center;caret-color:transparent}main{text-align:center}.btn{margin-right:.5rem;margin-left:.5rem}@media (min-width: 576px){main{padding:1rem}}@media not (min-width: 576px){main{padding:1rem 0}}
