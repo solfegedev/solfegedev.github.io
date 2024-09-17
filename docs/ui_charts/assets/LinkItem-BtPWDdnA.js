@@ -1,0 +1,1 @@
+import{j as e}from"./client-B8KsQLkO.js";const i=r=>e.jsx("li",{children:e.jsx("a",{target:"_blank",...r,children:r.children})}),t=r=>e.jsx("img",{loading:"lazy",referrerPolicy:"no-referrer",...r,children:r.children});export{t as I,i as L};
