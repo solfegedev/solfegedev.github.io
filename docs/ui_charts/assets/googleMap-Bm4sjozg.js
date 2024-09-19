@@ -1,0 +1,1 @@
+const f=({origin:a,destination:t,centreZoom:r,isSatellite:o,hasTraffic:w})=>{if(t&&!a)throw new Error("Cannot have destiantion without origin");let e="https://www.google.co.uk/maps/"+(t?"dir":"place");a&&(e+=`/${a}`),t&&(e+=`/${t}`),r&&(e+=`/@${r}`);let l=o?"!3m2!1e3!4b1":"!3m1!4b1";return w&&(l+="!5m1!1e1"),e+(l.length>0?`/data=${l}`:"")};export{f as g};
