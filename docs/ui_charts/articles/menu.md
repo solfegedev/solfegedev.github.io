@@ -8,3 +8,7 @@
 ## Cooking
 
 - [Bread](?article=cooking_bread)
+
+## Technical
+
+- [GIMP](?article=gimp)
