@@ -28,14 +28,16 @@ typing issues…</li>
 
   <li>Developing automated end to end tests using Python.</li>
 
-</ul>`},{jobTitle:"Senior SDET",company:"WorkDay",location:"London, UK",sector:"HR/Workforce Analytics",date:"1yr contracts: Sep 2021 - Sep 2022",content:`
+</ul>`},{jobTitle:"Senior SDET",company:"Workday",location:"London, UK",sector:"HR/Workforce Analytics",date:"1yr contracts: Sep 2021 - Sep 2022",content:`
 Part of the SDET team in the Augmented Analytics department. Tasks included:
 <ul>
 
   <li>Develop automated end to end tests for our new features, using <b>Python</b> and <b>Robot
 Framework</b>. Half of the tests were UI related using <b>Selenium</b>, and half were REST API related.
-Tests were integrated to our CI/CD using both Jenkins and Bamboo, and all Docker
-containers required were tested in AWS EC2 instances.</li>
+Regularly reviewed developers' TypeScript Jest unit tests to ensure comprehensive coverage and eliminate redundant end-to-end tests.
+Tests were integrated to our CI/CD pipeline using both Jenkins and Bamboo, and all Docker
+containers required were tested on AWS EC2 instances.
+</li>
 
   <li>Analyse logs from Jenkins/Bamboo, Robot Framework, and docker containers. Then report
 issues in JIRA or update our end to end tests accordingly.</li>
