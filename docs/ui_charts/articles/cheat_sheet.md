@@ -11,10 +11,10 @@
   margin: auto; /* TBLR / TB LR / T LR B / T R B L */
   display: flex;
   flex-direction: row|column;
+  gap: 1rem 4rem; /* row-gap, column-gap */
   flex-wrap: nowrap;
   justify-content: start|end|center; /* main axis alignment of items */
-  align-items: start|end|center|baseline; /* cross axis alignment of items */
-  gap: 1rem 4rem; /* row-gap, column-gap */
+  align-items: start|end|center|baseline; /* cross axis alignment of items (within each line) */
   align-content: start|end|center; /* cross-axis alignment of lines */
 }
 ```
