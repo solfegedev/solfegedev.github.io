@@ -36,9 +36,12 @@ Tools > Selection Tools >  Foreground Select
 
 #### Layer method
 
-- on Layer, right-click `Duplicate Layer`
-- Select top layer. Make mask using: `Colours > Saturation` to make it greyscale , `Colours > Curces...` to make it black & White, `Colours > Invert` if needed.
-- Select bottom layer. Right-click `Add Layer Mask` and select `White`.
-- Copy top layer and `Crtl+V`. This will create middle layer
-- Anchor the Floating Selection
+- `Colours` > `Components` > `Decompose...`: `HSL`
+- Keep `Hue` Layer, but delete the other layers (`saturation` and `lightness`): Right-click, `Delete layer`
+- `Colours` > `Curves...`: set a pass band filter to select only the desired hue.
+- `Image` > `Mode`: RGB
+- `File` > `Open as Layer`: select the original image file
+- Select the colour image layer. Right-click `Add Layer Mask` and select `White`.
+- click mask: Ctrl+C
+- click maks: Ctrl+V, then click Anchor icon (to Anchor the Floating Selection)
 - Delete the Mask Layer
