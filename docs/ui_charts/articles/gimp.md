@@ -4,7 +4,7 @@
 
 Crop tool: `Shift + C` and in `Tool Options`, select `Fixed: Aspect ratio`
 
-Resize to 48 or 192 pixels: `Image > Scale Image`
+Resize to 48 or multiples (e.g. 192 pixels): `Image > Scale Image`
 
 Export AS: `.png`
 
