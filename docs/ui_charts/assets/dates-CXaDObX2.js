@@ -1,1 +1,0 @@
-const s=6e4,N=36e5,n=864e5,e=86400,r=(t,S=!1)=>{if(t>=864e5)return`${(t/864e5).toFixed(1)} days`;const o=Math.floor(t/36e5);t-=o*36e5;const M=Math.floor(t/6e4);t-=M*6e4;const a=Math.floor(t/1e3);let _="";return o>0?_+=`${o}h${String(M).padStart(2,"0")}m`:_+=`${M}m`,S&&(_+=`${String(a).padStart(2,"0")}s`),_};export{n as D,N as H,s as M,r as a,e as b};
