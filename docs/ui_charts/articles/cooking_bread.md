@@ -5,9 +5,9 @@
 No pre-levain:
 
 - 28g starter
-- 4 x 700g dough @ 80%: 1538g F + 1228g W
+- **Seb**: 4 x 700g dough @ 80%: 1538g F + 1228g W
 - 4 x 700g dough @ 80%: levain 142 F + 172W, 1396g F + 1056g W
-- 2 x 750g dough @ 80%: 824g F + 656g W
+- **Maja**: 2 x 750g dough @ 80%: 824g F + 656g W
 
 Results:
 
