@@ -1,0 +1,1 @@
+const r=()=>new URLSearchParams(window.location.search),c=a=>{const t=window.location.origin+window.location.pathname+(a.size>0?"?"+a.toString():"");window.history.replaceState({path:t},"",t)},i=a=>{const t=r();Object.entries(a).forEach(([e,[o,s]])=>{o!==s?t.set(e,o):t.has(e)&&t.delete(e)}),c(t)};export{r as g,i as m};
