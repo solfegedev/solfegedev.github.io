@@ -1,0 +1,1 @@
+import{useRef as t,useEffect as u}from"https://cdn.jsdelivr.net/npm/react@18.3.1/+esm";function o(n){const e=t(n);return e.current=n,e}function f(n){const e=o(n);u(()=>()=>e.current(),[])}export{f as u};
