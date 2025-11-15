@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";import{j as t,R as e,a as r}from"./client-BsyqJ1xH.js";const n=()=>t.jsx(t.Fragment,{children:t.jsx("h1",{children:"Todo List"})}),o=document.getElementById("root");if(!o)throw new Error("Root element #root not found");e.createRoot(o).render(t.jsx(r.StrictMode,{children:t.jsx(n,{})}));
