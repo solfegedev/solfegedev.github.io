@@ -1,4 +1,0 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const o=document.getElementById("root");if(!o)throw new Error("Landing page element #root not found");document.body.classList.add("landing-page");o.classList.add("landing-page__hero");const s=e=>{const t=new Date(Date.UTC(e.getFullYear(),e.getMonth(),e.getDate())),a=t.getUTCDay()||7;t.setUTCDate(t.getUTCDate()+4-a);const n=new Date(Date.UTC(t.getUTCFullYear(),0,1));return Math.ceil(((t.getTime()-n.getTime())/864e5+1)/7)},g=new Intl.DateTimeFormat(void 0,{weekday:"long",year:"numeric",month:"long",day:"numeric"}),d=e=>{const t=e.getUTCDay();return t===0?7:t},c=()=>{const e=new Date,t=s(e),a=d(e),n=e.getFullYear().toString().slice(-2),r=t.toString().padStart(2,"0");o.innerHTML=`
-    <span class="landing-page__date">${g.format(e)}</span>
-    <span class="landing-page__week">Week ${n}${r}.${a}</span>
-  `};c();
