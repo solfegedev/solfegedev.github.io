@@ -1,1 +1,0 @@
-import"./index-F_Pwjxo7.js";import{j as o}from"./jsx-runtime-u17CrQMm.js";import{A as e}from"./app-Bob3athT.js";const t=document.getElementById("root");if(!t)throw new Error("Root element #root not found");document.body.classList.add("menuall-page");ReactDOM.createRoot(t).render(o.jsx(React.StrictMode,{children:o.jsx(e,{})}));
