@@ -1,0 +1,4 @@
+import"./index-Cm_Ydr0l.js";const d=t=>{const e=new Date(Date.UTC(t.getFullYear(),t.getMonth(),t.getDate())),n=e.getUTCDay()||7;e.setUTCDate(e.getUTCDate()+4-n);const a=e.getUTCFullYear(),o=new Date(Date.UTC(a,0,1));return{week:Math.ceil(((e.getTime()-o.getTime())/864e5+1)/7),year:a}},g=t=>{const e=t.getUTCDay();return e===0?7:e},s=document.getElementById("root");if(!s)throw new Error("Landing page element #root not found");document.body.classList.add("landing-page");s.classList.add("landing-page__hero");const c=new Intl.DateTimeFormat(void 0,{weekday:"long",year:"numeric",month:"long",day:"numeric"}),i=()=>{const t=new Date,{week:e,year:n}=d(t),a=g(t),o=n.toString().slice(-2),r=e.toString().padStart(2,"0");s.innerHTML=`
+    <span class="landing-page__date">${c.format(t)}</span>
+    <span class="landing-page__week">Week ${o}${r}.${a}</span>
+  `};i();

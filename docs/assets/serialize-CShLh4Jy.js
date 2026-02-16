@@ -1,0 +1,1 @@
+const t=e=>Array.isArray(e)?e.map(r=>t(r)):e!==null&&typeof e=="object"?Object.entries(e).reduce((r,[u,n])=>(n!==null&&(r[u]=t(n)),r),{}):e,s=e=>{const r=t(e);return jsyaml.dump(r,{indent:2,sortKeys:!0,lineWidth:-1,noRefs:!0,skipInvalid:!0})};export{s as y};
