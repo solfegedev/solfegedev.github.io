@@ -1,1 +1,0 @@
-import e from"https://esm.sh/js-yaml@^4.1.1?bundle";var t=e=>Array.isArray(e)?e.map(e=>t(e)):typeof e==`object`&&e?Object.entries(e).reduce((e,[n,r])=>(r!==null&&(e[n]=t(r)),e),{}):e,n=n=>{let r=t(n);return e.dump(r,{indent:2,sortKeys:!0,lineWidth:-1,noRefs:!0,skipInvalid:!0})};export{n as t};
