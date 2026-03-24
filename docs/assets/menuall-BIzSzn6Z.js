@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-V-fK2lY9.js";import"./pages-DNV-IsNH.js";import{t}from"./app-plGg9tEf.js";var n=e(),r=document.getElementById(`root`);if(!r)throw Error(`Root element #root not found`);document.body.classList.add(`menuall-page`),ReactDOM.createRoot(r).render((0,n.jsx)(React.StrictMode,{children:(0,n.jsx)(t,{})}));
