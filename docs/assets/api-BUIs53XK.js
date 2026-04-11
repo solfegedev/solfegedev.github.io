@@ -1,1 +1,0 @@
-var e=`https://api8016.solfegeai.com`.replace(/\/+$/,``);export{e as t};
