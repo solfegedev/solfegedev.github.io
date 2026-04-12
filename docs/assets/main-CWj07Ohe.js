@@ -1,4 +1,0 @@
-import"./pages-Bo2UA9Rd.js";var e=e=>{let t=new Date(Date.UTC(e.getFullYear(),e.getMonth(),e.getDate())),n=t.getUTCDay()||7;t.setUTCDate(t.getUTCDate()+4-n);let r=t.getUTCFullYear(),i=new Date(Date.UTC(r,0,1));return{week:Math.ceil(((t.getTime()-i.getTime())/864e5+1)/7),year:r}},t=e=>{let t=e.getUTCDay();return t===0?7:t},n=document.getElementById(`root`);if(!n)throw Error(`Landing page element #root not found`);document.body.classList.add(`landing-page`),n.classList.add(`landing-page__hero`);var r=new Intl.DateTimeFormat(void 0,{weekday:`long`,year:`numeric`,month:`long`,day:`numeric`});(()=>{let i=new Date,{week:a,year:o}=e(i),s=t(i),c=o.toString().slice(-2),l=a.toString().padStart(2,`0`);n.innerHTML=`
-    <span class="landing-page__date">${r.format(i)}</span>
-    <span class="landing-page__week">Week ${c}${l}.${s}</span>
-  `})();
