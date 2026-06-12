@@ -1,1 +1,0 @@
-var e=t=>Array.isArray(t)?t.map(t=>e(t)):typeof t==`object`&&t?Object.entries(t).reduce((t,[n,r])=>(r!==null&&(t[n]=e(r)),t),{}):t,t=t=>{let n=e(t);return jsyaml.dump(n,{indent:2,sortKeys:!0,lineWidth:-1,noRefs:!0,skipInvalid:!0})};export{t};
