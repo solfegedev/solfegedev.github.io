@@ -1,0 +1,2328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MAJESTIC SUMMARY</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f1e8;
+        --panel: #fffaf2;
+        --ink: #241812;
+        --muted: #665044;
+        --line: #d8c9bb;
+        --accent: #6f2f1c;
+        --accent-ink: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 2rem 1rem 3rem;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(111, 47, 28, 0.08), transparent 30%),
+          linear-gradient(180deg, #fbf6ef, var(--bg));
+        color: var(--ink);
+      }
+
+      main {
+        max-width: 100rem;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.75rem;
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 0 0 1.25rem;
+        color: var(--muted);
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: var(--panel);
+        box-shadow: 0 0.75rem 2rem rgba(36, 24, 18, 0.08);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 60rem;
+      }
+
+      thead th {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 250, 242, 0.96);
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        padding: 0;
+      }
+
+      tbody td {
+        border-top: 1px solid var(--line);
+        vertical-align: top;
+        padding: 0.85rem 0.9rem;
+      }
+
+      tbody tr:nth-child(even) {
+        background: rgba(111, 47, 28, 0.03);
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.12em;
+      }
+
+      .sort-button {
+        display: block;
+        width: 100%;
+        padding: 0.85rem 0.9rem;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        text-align: left;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .sort-button:hover,
+      .sort-button:focus-visible {
+        background: rgba(111, 47, 28, 0.08);
+        outline: none;
+      }
+
+      .sort-button[data-direction="asc"]::after {
+        content: " ↑";
+        color: var(--accent);
+      }
+
+      .sort-button[data-direction="desc"]::after {
+        content: " ↓";
+        color: var(--accent);
+      }
+
+      .note {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>MAJESTIC SUMMARY</h1>
+      <p>Click any column header to sort.</p>
+      <div class="table-wrap">
+        <table id="summary-table">
+          <thead>
+            <tr>
+              <th><button class="sort-button" type="button" data-column="0">Wine</button></th>
+              <th><button class="sort-button" type="button" data-column="1">Country</button></th>
+              <th><button class="sort-button" type="button" data-column="2">Price</button></th>
+              <th><button class="sort-button" type="button" data-column="3">Mix of six discount</button></th>
+              <th><button class="sort-button" type="button" data-column="4">Rating</button></th>
+              <th><button class="sort-button" type="button" data-column="5">Notes</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                data-sort-value="[château de crézancy sancerre rouge 2023/24](https://www.majestic.co.uk/wines/sancerre-rouge-c-crezancy-05036)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/sancerre-rouge-c-crezancy-05036"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Château De Crézancy Sancerre Rouge 2023/24</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="21.50" data-sort-kind="number">£21.50</td>
+              <td data-sort-value="1.00" data-sort-kind="number">Save £1.00</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/fr-chateau-de-sancerre-sancerre-blanc/w/1427995?year=2025&amp;price_id=42020334"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[louis m. martini cabernet sauvignon 2021/22, sonoma county](https://www.majestic.co.uk/wines/louis-martini-sonoma-cab-sauv-18996)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/louis-martini-sonoma-cab-sauv-18996"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Louis M. Martini Cabernet Sauvignon 2021/22, Sonoma County</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="22.00" data-sort-kind="number">£22.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château grand faurie la rose saint-émilion grand cru 2019/20](https://www.majestic.co.uk/wines/ch-grand-faurie-larose-01699)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/ch-grand-faurie-larose-01699" target="_blank" rel="noreferrer"
+                  >Château Grand Faurie La Rose Saint-Émilion Grand Cru 2019/20</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="22.50" data-sort-kind="number">£22.50</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/chateau-jean-faure-saint-emilion-grand-cru-grand-cru-classe/w/1146826?year=2019&amp;price_id=35555856"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château lilian ladouys la devise de lillian 2019, saint-estèphe, bordeaux](https://www.majestic.co.uk/wines/château-lilian-ladouys-la-devise-de-lillian-2019-61979)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/château-lilian-ladouys-la-devise-de-lillian-2019-61979"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Château Lilian Ladouys La Devise de Lillian 2019, Saint-Estèphe, Bordeaux</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="22.50" data-sort-kind="number">£22.50</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[domaine michelas st jemms les alexandrins crozes-hermitage 2023](https://www.majestic.co.uk/wines/alexandrins-c-hermitage-06906)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/alexandrins-c-hermitage-06906"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Domaine Michelas St Jemms Les Alexandrins Crozes-Hermitage 2023</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="22.50" data-sort-kind="number">£22.50</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[muga rioja reserva 2021/22](https://www.majestic.co.uk/wines/muga-reserva-14254)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/muga-reserva-14254" target="_blank" rel="noreferrer"
+                  >Muga Rioja Reserva 2021/22</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="22.50" data-sort-kind="number">£22.50</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/bodegas-muga-reserva/w/1849316?year=2021&amp;price_id=39132477"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[rémy ferbras gigondas 2021/22](https://www.majestic.co.uk/wines/rèmy-ferbras-gigondas-06633)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/rèmy-ferbras-gigondas-06633" target="_blank" rel="noreferrer"
+                  >Rémy Ferbras Gigondas 2021/22</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="22.50" data-sort-kind="number">£22.50</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=R%C3%A9my%20Ferbras%20Gigondas%202021/22"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[balfour &#x27;1503&#x27; pinot noir 2023/24, kent](https://www.majestic.co.uk/wines/balfour-1503-pinot-noir-35298)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/balfour-1503-pinot-noir-35298"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Balfour &#x27;1503&#x27; Pinot Noir 2023/24, Kent</a
+                >
+              </td>
+              <td data-sort-value="england" data-sort-kind="text">England</td>
+              <td data-sort-value="23.00" data-sort-kind="number">£23.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="3.6" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/balfour-england-luke-s-pinot-noir/w/7587867?year=2024&amp;price_id=40626390"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.6</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[louis latour bourgogne pinot noir 2022/23](https://www.majestic.co.uk/wines/pinot-noir-louis-latour-03236)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/pinot-noir-louis-latour-03236"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Louis Latour Bourgogne Pinot Noir 2022/23</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="23.00" data-sort-kind="number">£23.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="3.7" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/louis-latour-bourgogne-pinot-noir/w/7343?year=2023&amp;price_id=41157192"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.7</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[mendel selection malbec 2021/23, mendoza](https://www.majestic.co.uk/wines/mendel-selection-malbec-40169)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/mendel-selection-malbec-40169"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Mendel Selection Malbec 2021/23, Mendoza</a
+                >
+              </td>
+              <td data-sort-value="argentina" data-sort-kind="text">Argentina</td>
+              <td data-sort-value="23.00" data-sort-kind="number">£23.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[definition by majestic châteauneuf-du-pape aoc, 2023](https://www.majestic.co.uk/wines/definition-by-maj-cndp-06649)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/definition-by-maj-cndp-06649" target="_blank" rel="noreferrer"
+                  >Definition by Majestic Châteauneuf-du-Pape AOC, 2023</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="23.50" data-sort-kind="number">£23.50</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Definition%20by%20Majestic%20Ch%C3%A2teauneuf-du-Pape%20AOC%2C%202023"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="***" data-sort-kind="text">***</td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[tenuta casenuove chianti classico docg 2019/20](https://www.majestic.co.uk/wines/tenuta-casenuove-chianti-class-73350)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/tenuta-casenuove-chianti-class-73350"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Tenuta Casenuove Chianti Classico DOCG 2019/20</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="23.50" data-sort-kind="number">£23.50</td>
+              <td data-sort-value="2.50" data-sort-kind="number">Save £2.50</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/tenuta-casenuove-chianti-classico-riserva/w/8740500?year=2019&amp;price_id=38966304"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[araldica barolo docg 2020/21](https://www.majestic.co.uk/wines/barolo-araldica-13445)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/barolo-araldica-13445" target="_blank" rel="noreferrer"
+                  >Araldica Barolo DOCG 2020/21</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="24.00" data-sort-kind="number">£24.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[cantine volpi barbaresco docg, piemonte](https://www.majestic.co.uk/wines/barbaresco-volpi-73243)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/barbaresco-volpi-73243" target="_blank" rel="noreferrer"
+                  >Cantine Volpi Barbaresco DOCG, Piemonte</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="24.00" data-sort-kind="number">£24.00</td>
+              <td data-sort-value="2.50" data-sort-kind="number">Save £2.50</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/cantine-volpi-moscato-piemonte/w/1235332?year=2024&amp;price_id=40484341"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[jackson estate vintage widow pinot noir 2019/20, marlborough](https://www.majestic.co.uk/wines/jackson-estate-vintage-widow-37475)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/jackson-estate-vintage-widow-37475"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Jackson Estate Vintage Widow Pinot Noir 2019/20, Marlborough</a
+                >
+              </td>
+              <td data-sort-value="new zealand" data-sort-kind="text">New Zealand</td>
+              <td data-sort-value="24.00" data-sort-kind="number">£24.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/jackson-estate-vintage-widow-pinot-noir/w/42894?year=2020&amp;price_id=41743744"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[erath pinot noir 2021/22, oregon](https://www.majestic.co.uk/wines/erath-oregon-pinot-noir-18033)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/erath-oregon-pinot-noir-18033"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Erath Pinot Noir 2021/22, Oregon</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="24.50" data-sort-kind="number">£24.50</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/wild-earth-pinot-noir/w/1124389?year=2021&amp;price_id=37082950"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[sons of eden &#x27;marschall&#x27; shiraz 2022/23, barossa valley](https://www.majestic.co.uk/wines/sons-of-eden-marschall-shiraz-59232)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/sons-of-eden-marschall-shiraz-59232"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Sons of Eden &#x27;Marschall&#x27; Shiraz 2022/23, Barossa Valley</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="24.50" data-sort-kind="number">£24.50</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/powell-son-barossa-eden-valleys-shiraz/w/3854740?year=2014&amp;price_id=40284901"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[torbreck &#x27;woodcutter&#x27;s&#x27; shiraz 2023/24, barossa](https://www.majestic.co.uk/wines/torbreck-woodcutters-shiraz-59142)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/torbreck-woodcutters-shiraz-59142"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Torbreck &#x27;Woodcutter&#x27;s&#x27; Shiraz 2023/24, Barossa</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="24.50" data-sort-kind="number">£24.50</td>
+              <td data-sort-value="2.50" data-sort-kind="number">Save £2.50</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/torbreck-woodcutter-s-shiraz/w/11798?year=2023&amp;price_id=39175710"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[antica vigna amarone della valpolicella docg 2021/22](https://www.majestic.co.uk/wines/amarone-docg-antica-vigna-73999)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/amarone-docg-antica-vigna-73999"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Antica Vigna Amarone della Valpolicella DOCG 2021/22</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="25.00" data-sort-kind="number">£25.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[maison chanzy &#x27;en rosey&#x27; rully rouge 2022/23, burgundy](https://www.majestic.co.uk/wines/rully-en-rosey-rouge-chanzy-03837)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/rully-en-rosey-rouge-chanzy-03837"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Maison Chanzy &#x27;En Rosey&#x27; Rully Rouge 2022/23, Burgundy</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="25.00" data-sort-kind="number">£25.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Maison%20Chanzy%20%27En%20Rosey%27%20Rully%20Rouge%202022/23%2C%20Burgundy"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[domaine des tourelles &#x27;grand cuvée pierre brun&#x27; 2020/22, lebanon](https://www.majestic.co.uk/wines/grande-cuvee-pierre-brun-38061)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/grande-cuvee-pierre-brun-38061"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Domaine des Tourelles &#x27;Grand Cuvée Pierre Brun&#x27; 2020/22, Lebanon</a
+                >
+              </td>
+              <td data-sort-value="lebanon" data-sort-kind="text">Lebanon</td>
+              <td data-sort-value="25.50" data-sort-kind="number">£25.50</td>
+              <td data-sort-value="2.50" data-sort-kind="number">Save £2.50</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[two hands &#x27;gnarly dudes&#x27; shiraz 2023/24, barossa valley](https://www.majestic.co.uk/wines/gnarly-dudes-shiraz-19983)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/gnarly-dudes-shiraz-19983" target="_blank" rel="noreferrer"
+                  >Two Hands &#x27;Gnarly Dudes&#x27; Shiraz 2023/24, Barossa Valley</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="25.50" data-sort-kind="number">£25.50</td>
+              <td data-sort-value="3.50" data-sort-kind="number">Save £3.50</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/two-hands-gnarly-dudes-shiraz/w/6169?year=2021&amp;price_id=40458577"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[agricola punica &#x27;montessu&#x27; igt isola dei nuraghi 2020](https://www.majestic.co.uk/wines/agric-punica-montessu-igt-73811)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/agric-punica-montessu-igt-73811"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Agricola Punica &#x27;Montessu&#x27; IGT Isola dei Nuraghi 2020</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="26.00" data-sort-kind="number">£26.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Agricola%20Punica%20%27Montessu%27%20IGT%20Isola%20dei%20Nuraghi%202020"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château la garance &#x27;vieilles vignes&#x27; 2013, graves](https://www.majestic.co.uk/wines/chateau-la-garance-61638)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/chateau-la-garance-61638" target="_blank" rel="noreferrer"
+                  >Château La Garance &#x27;Vieilles Vignes&#x27; 2013, Graves</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="26.00" data-sort-kind="number">£26.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[definition by majestic barolo docg 2020](https://www.majestic.co.uk/wines/def-by-maj-barolo-73691)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/def-by-maj-barolo-73691" target="_blank" rel="noreferrer"
+                  >Definition by Majestic Barolo DOCG 2020</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="26.00" data-sort-kind="number">£26.00</td>
+              <td data-sort-value="2.50" data-sort-kind="number">Save £2.50</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[les grandes serres ‘hommage du rhône’ châteauneuf-du-pape 2022/23](https://www.majestic.co.uk/wines/hommage-du-rhone-cndp-06634)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/hommage-du-rhone-cndp-06634" target="_blank" rel="noreferrer"
+                  >Les Grandes Serres ‘Hommage du Rhône’ Châteauneuf-du-Pape 2022/23</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="26.00" data-sort-kind="number">£26.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[mollydooker &#x27;the boxer&#x27; shiraz 2023/25, australia](https://www.majestic.co.uk/wines/mollydooker-the-boxer-shiraz-19991)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/mollydooker-the-boxer-shiraz-19991"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Mollydooker &#x27;The Boxer&#x27; Shiraz 2023/25, Australia</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="26.00" data-sort-kind="number">£26.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/mollydooker-winery-the-boxer-shiraz/w/950?year=2023&amp;price_id=41651005"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[viña pomal rioja gran reserva 2016/18, rioja](https://www.majestic.co.uk/wines/vina-pomal-rioja-gran-res-14432)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/vina-pomal-rioja-gran-res-14432"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Viña Pomal Rioja Gran Reserva 2016/18, Rioja</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="26.00" data-sort-kind="number">£26.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[beronia rioja gran reserva 2017/18](https://www.majestic.co.uk/wines/beronia-gran-reserva-rioja-14622)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/beronia-gran-reserva-rioja-14622"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Beronia Rioja Gran Reserva 2017/18</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="27.00" data-sort-kind="number">£27.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/beronia-rioja-gran-reserva/w/1233459?year=2017&amp;price_id=40738138"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[boekenhoutskloof &#x27;the chocolate block&#x27; 2023/24, swartland](https://www.majestic.co.uk/wines/the-chocolate-block-20245)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/the-chocolate-block-20245" target="_blank" rel="noreferrer"
+                  >Boekenhoutskloof &#x27;The Chocolate Block&#x27; 2023/24, Swartland</a
+                >
+              </td>
+              <td data-sort-value="south africa" data-sort-kind="text">South Africa</td>
+              <td data-sort-value="27.00" data-sort-kind="number">£27.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/boekenhoutskloof-the-chocolate-block/w/1128252?year=2023&amp;price_id=39764326"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château méaume matured bordeaux supérieur magnum 2022, france](https://www.majestic.co.uk/wines/chateau-meaume-magnum-61800)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/chateau-meaume-magnum-61800" target="_blank" rel="noreferrer"
+                  >Château Méaume Matured Bordeaux Supérieur Magnum 2022, France</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="27.00" data-sort-kind="number">£27.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="3.5" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/chateau-meaume-bordeaux-superieur/w/98781?year=2023&amp;price_id=39759899"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.5</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[louis violland mercurey 2022/23, burgundy](https://www.majestic.co.uk/wines/mercurey-louis-violland-63045)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/mercurey-louis-violland-63045"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Louis Violland Mercurey 2022/23, Burgundy</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="27.00" data-sort-kind="number">£27.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/louis-violland-chablis/w/8217017?year=2024&amp;price_id=42284574"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[léon perdigal châteauneuf-du-pape 2023](https://www.majestic.co.uk/wines/cndp-leon-perdigal-red-06650)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/cndp-leon-perdigal-red-06650" target="_blank" rel="noreferrer"
+                  >Léon Perdigal Châteauneuf-du-Pape 2023</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="27.00" data-sort-kind="number">£27.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[quinta da corte princesa douro](https://www.majestic.co.uk/wines/q-da-corte-princesa-douro-15001)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/q-da-corte-princesa-douro-15001"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Quinta da Corte Princesa Douro</a
+                >
+              </td>
+              <td data-sort-value="portugal" data-sort-kind="text">Portugal</td>
+              <td data-sort-value="27.00" data-sort-kind="number">£27.00</td>
+              <td data-sort-value="6.00" data-sort-kind="number">Save £6.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[viñalba reserve malbec magnum, argentina](https://www.majestic.co.uk/wines/vinalba-malbec-res-magnum-40110)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/vinalba-malbec-res-magnum-40110"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Viñalba Reserve Malbec Magnum, Argentina</a
+                >
+              </td>
+              <td data-sort-value="argentina" data-sort-kind="text">Argentina</td>
+              <td data-sort-value="27.00" data-sort-kind="number">£27.00</td>
+              <td data-sort-value="6.00" data-sort-kind="number">Save £6.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[cantele amativo salento igt 2023/24, puglia](https://www.majestic.co.uk/wines/cantele-amativo-igt-salento-73812)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/cantele-amativo-igt-salento-73812"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Cantele Amativo Salento IGT 2023/24, Puglia</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="28.00" data-sort-kind="number">£28.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Cantele%20Amativo%20Salento%20IGT%202023/24%2C%20Puglia"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[cantina negrar &#x27;vigneti di roccolo&#x27; amarone della valpolicella 2021/22](https://www.majestic.co.uk/wines/amarone-classico-vigneti-di-roccolo-13675)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/amarone-classico-vigneti-di-roccolo-13675"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Cantina Negrar &#x27;Vigneti di Roccolo&#x27; Amarone della Valpolicella 2021/22</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="28.00" data-sort-kind="number">£28.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[meerlust merlot 2022/23, stellenbosch](https://www.majestic.co.uk/wines/meerlust-merlot-20092)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/meerlust-merlot-20092" target="_blank" rel="noreferrer"
+                  >Meerlust Merlot 2022/23, Stellenbosch</a
+                >
+              </td>
+              <td data-sort-value="south africa" data-sort-kind="text">South Africa</td>
+              <td data-sort-value="28.00" data-sort-kind="number">£28.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Meerlust%20Merlot%202022/23%2C%20Stellenbosch"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[penfolds ‘father’ grand tawny, australia](https://www.majestic.co.uk/wines/penfolds-father-tawny-19187)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/penfolds-father-tawny-19187" target="_blank" rel="noreferrer"
+                  >Penfolds ‘Father’ Grand Tawny, Australia</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="28.00" data-sort-kind="number">£28.00</td>
+              <td data-sort-value="2.00" data-sort-kind="number">Save £2.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Penfolds%20%E2%80%98Father%E2%80%99%20Grand%20Tawny%2C%20Australia"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[áster ribera del duero reserva 2022](https://www.majestic.co.uk/wines/aster-ribera-duero-crianza-14844)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/aster-ribera-duero-crianza-14844"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Áster Ribera del Duero Reserva 2022</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="28.00" data-sort-kind="number">£28.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=%C3%81ster%20Ribera%20del%20Duero%20Reserva%202022"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[aimé arnoux châteauneuf-du-pape 2022/23](https://www.majestic.co.uk/wines/aime-arnoux-chateauneuf-du-pape-97140)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/aime-arnoux-chateauneuf-du-pape-97140"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Aimé Arnoux Châteauneuf-du-Pape 2022/23</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="29.00" data-sort-kind="number">£29.00</td>
+              <td data-sort-value="8.00" data-sort-kind="number">Save £8.00</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Aim%C3%A9%20Arnoux%20Ch%C3%A2teauneuf-du-Pape%202022/23"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[cvne &#x27;imperial&#x27; rioja reserva 2019/20](https://www.majestic.co.uk/wines/rioja-reserva-imperial-14164)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/rioja-reserva-imperial-14164" target="_blank" rel="noreferrer"
+                  >CVNE &#x27;Imperial&#x27; Rioja Reserva 2019/20</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="29.00" data-sort-kind="number">£29.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=CVNE%20%27Imperial%27%20Rioja%20Reserva%202019/20"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château meyney &#x27;la chapelle de meyney&#x27; 2016/17, saint-estèphe](https://www.majestic.co.uk/wines/chateau-meyney-la-chapelle-de-meyney-2014-saint-estephe-61215)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/chateau-meyney-la-chapelle-de-meyney-2014-saint-estephe-61215"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Château Meyney &#x27;La Chapelle de Meyney&#x27; 2016/17, Saint-Estèphe</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="29.00" data-sort-kind="number">£29.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Ch%C3%A2teau%20Meyney%20%27La%20Chapelle%20de%20Meyney%27%202016/17%2C%20Saint-Est%C3%A8phe"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="***" data-sort-kind="text">***</td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[definition by majestic margaux 2020/21](https://www.majestic.co.uk/wines/def-by-maj-margaux-61408)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/def-by-maj-margaux-61408" target="_blank" rel="noreferrer"
+                  >Definition by Majestic Margaux 2020/21</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="29.00" data-sort-kind="number">£29.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[e. guigal gigondas 2020/21, rhône valley](https://www.majestic.co.uk/wines/gigondas-guigal-06235)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/gigondas-guigal-06235" target="_blank" rel="noreferrer"
+                  >E. Guigal Gigondas 2020/21, Rhône Valley</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="29.00" data-sort-kind="number">£29.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=E.%20Guigal%20Gigondas%202020/21%2C%20Rh%C3%B4ne%20Valley"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="***" data-sort-kind="text">***</td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[e. guigal saint-joseph 2020/21](https://www.majestic.co.uk/wines/guigal-st-joseph-rouge-06208)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/guigal-st-joseph-rouge-06208" target="_blank" rel="noreferrer"
+                  >E. Guigal Saint-Joseph 2020/21</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="29.00" data-sort-kind="number">£29.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=E.%20Guigal%20Saint-Joseph%202020/21"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[jackson estate &#x27;somerset&#x27; pinot noir 2019/20, marlborough](https://www.majestic.co.uk/wines/jackson-estate-somerset-pinot-noir-37349)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/jackson-estate-somerset-pinot-noir-37349"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Jackson Estate &#x27;Somerset&#x27; Pinot Noir 2019/20, Marlborough</a
+                >
+              </td>
+              <td data-sort-value="new zealand" data-sort-kind="text">New Zealand</td>
+              <td data-sort-value="29.00" data-sort-kind="number">£29.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Jackson%20Estate%20%27Somerset%27%20Pinot%20Noir%202019/20%2C%20Marlborough"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[villa antinori chianti classico riserva 2021/22](https://www.majestic.co.uk/wines/chianti-classico-riserva-13175)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/chianti-classico-riserva-13175"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Villa Antinori Chianti Classico Riserva 2021/22</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="29.00" data-sort-kind="number">£29.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Villa%20Antinori%20Chianti%20Classico%20Riserva%202021/22"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[chateau du tertre &#x27;les hauts du tertre&#x27; 2012, margaux](https://www.majestic.co.uk/wines/les-hauts-du-tertre-2012-61950)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/les-hauts-du-tertre-2012-61950"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Chateau du Tertre &#x27;Les Hauts du Tertre&#x27; 2012, Margaux</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="30.00" data-sort-kind="number">£30.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Chateau%20du%20Tertre%20%27Les%20Hauts%20du%20Tertre%27%202012%2C%20Margaux"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[definition by majestic pauillac 2019/20](https://www.majestic.co.uk/wines/def-by-maj-pauillac-61411)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/def-by-maj-pauillac-61411" target="_blank" rel="noreferrer"
+                  >Definition by Majestic Pauillac 2019/20</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="30.00" data-sort-kind="number">£30.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="3.7" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Definition%20by%20Majestic%20Pauillac%202019/20"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.7</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[te kairanga &#x27;john martin&#x27; pinot noir 2023/24, martinborough](https://www.majestic.co.uk/wines/te-kairanga-jm-pinot-noir-37580)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/te-kairanga-jm-pinot-noir-37580"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Te Kairanga &#x27;John Martin&#x27; Pinot Noir 2023/24, Martinborough</a
+                >
+              </td>
+              <td data-sort-value="new zealand" data-sort-kind="text">New Zealand</td>
+              <td data-sort-value="30.00" data-sort-kind="number">£30.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Te%20Kairanga%20%27John%20Martin%27%20Pinot%20Noir%202023/24%2C%20Martinborough"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[bodega matsu ‘el viejo’ 2020/21, toro](https://www.majestic.co.uk/wines/matsu-el-viejo-14012)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/matsu-el-viejo-14012" target="_blank" rel="noreferrer"
+                  >Bodega Matsu ‘El Viejo’ 2020/21, Toro</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.3" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Bodega%20Matsu%20%E2%80%98El%20Viejo%E2%80%99%202020/21%2C%20Toro"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.3</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château la sauvageonne organic ‘grand vin’ 2022/23, terrasses du larzac](https://www.majestic.co.uk/wines/la-sauvageonne-grand-vin-09034)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/la-sauvageonne-grand-vin-09034"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Château la Sauvageonne Organic ‘Grand Vin’ 2022/23, Terrasses du Larzac</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Ch%C3%A2teau%20la%20Sauvageonne%20Organic%20%E2%80%98Grand%20Vin%E2%80%99%202022/23%2C%20Terrasses%20du%20Larzac"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[domaine rewa pinot noir, central otago, new zealand, 2021](https://www.majestic.co.uk/wines/rewa-pinot-noir-37809)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/rewa-pinot-noir-37809" target="_blank" rel="noreferrer"
+                  >Domaine Rewa Pinot Noir, Central Otago, New Zealand, 2021</a
+                >
+              </td>
+              <td data-sort-value="new zealand" data-sort-kind="text">New Zealand</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Domaine%20Rewa%20Pinot%20Noir%2C%20Central%20Otago%2C%20New%20Zealand%2C%202021"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[la rioja alta &#x27;finca martelo&#x27; rioja reserva 2019/21](https://www.majestic.co.uk/wines/finca-martelo-rioja-reserva-14795)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/finca-martelo-rioja-reserva-14795"
+                  target="_blank"
+                  rel="noreferrer"
+                  >La Rioja Alta &#x27;Finca Martelo&#x27; Rioja Reserva 2019/21</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=La%20Rioja%20Alta%20%27Finca%20Martelo%27%20Rioja%20Reserva%202019/21"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[louis jadot bourgogne pinot noir 2021/22, côte d’or](https://www.majestic.co.uk/wines/jadot-bourgogne-cote-dor-pn-63444)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/jadot-bourgogne-cote-dor-pn-63444"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Louis Jadot Bourgogne Pinot Noir 2021/22, Côte D’Or</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Louis%20Jadot%20Bourgogne%20Pinot%20Noir%202021/22%2C%20C%C3%B4te%20D%E2%80%99Or"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[mollydooker &#x27;two left feet&#x27; 2021/22, mclaren vale](https://www.majestic.co.uk/wines/mollydooker-two-left-feet-59277)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/mollydooker-two-left-feet-59277"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Mollydooker &#x27;Two Left Feet&#x27; 2021/22, McLaren Vale</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Mollydooker%20%27Two%20Left%20Feet%27%202021/22%2C%20McLaren%20Vale"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[penfolds bin 8 shiraz-cabernet sauvignon 2022/23, south australia](https://www.majestic.co.uk/wines/penfolds-bin-8-59247)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/penfolds-bin-8-59247" target="_blank" rel="noreferrer"
+                  >Penfolds Bin 8 Shiraz-Cabernet Sauvignon 2022/23, South Australia</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Penfolds%20Bin%208%20Shiraz-Cabernet%20Sauvignon%202022/23%2C%20South%20Australia"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[radford dale &#x27;freedom&#x27; organic pinot noir 2023/24, elgin](https://www.majestic.co.uk/wines/radford-dale-organic-pin-noir-20777)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/radford-dale-organic-pin-noir-20777"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Radford Dale &#x27;Freedom&#x27; Organic Pinot Noir 2023/24, Elgin</a
+                >
+              </td>
+              <td data-sort-value="south africa" data-sort-kind="text">South Africa</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[wynns coonawarra estate &#x27;black label&#x27; cabernet sauvignon 2020/22, coonawarra](https://www.majestic.co.uk/wines/wynns-black-label-cab-sauv-59226)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/wynns-black-label-cab-sauv-59226"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Wynns Coonawarra Estate &#x27;Black Label&#x27; Cabernet Sauvignon 2020/22, Coonawarra</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Wynns%20Coonawarra%20Estate%20%27Black%20Label%27%20Cabernet%20Sauvignon%202020/22%2C%20Coonawarra"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[yalumba cigar cabernet sauvignon 2021/22, coonawarra](https://www.majestic.co.uk/wines/yalumba-cigar-coonawarra-cabernet-sauvignon-59096)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/yalumba-cigar-coonawarra-cabernet-sauvignon-59096"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Yalumba Cigar Cabernet Sauvignon 2021/22, Coonawarra</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="31.00" data-sort-kind="number">£31.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Yalumba%20Cigar%20Cabernet%20Sauvignon%202021/22%2C%20Coonawarra"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[cantina girlan &#x27;flora&#x27; pinot noir riserva 2021/22, alto adige doc](https://www.majestic.co.uk/wines/girlan-flora-pinn-res-doc-73159)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/girlan-flora-pinn-res-doc-73159"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Cantina Girlan &#x27;Flora&#x27; Pinot Noir Riserva 2021/22, Alto Adige DOC</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="32.00" data-sort-kind="number">£32.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Cantina%20Girlan%20%27Flora%27%20Pinot%20Noir%20Riserva%202021/22%2C%20Alto%20Adige%20DOC"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[catena malbec 2023/24 magnum, mendoza](https://www.majestic.co.uk/wines/catena-malbec-magnum-40227)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/catena-malbec-magnum-40227" target="_blank" rel="noreferrer"
+                  >Catena Malbec 2023/24 Magnum, Mendoza</a
+                >
+              </td>
+              <td data-sort-value="argentina" data-sort-kind="text">Argentina</td>
+              <td data-sort-value="32.00" data-sort-kind="number">£32.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Catena%20Malbec%202023/24%20Magnum%2C%20Mendoza"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[chateau malescasse](https://www.majestic.co.uk/wines/chateau-malescasse-61421)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/chateau-malescasse-61421" target="_blank" rel="noreferrer"
+                  >Chateau Malescasse</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="32.00" data-sort-kind="number">£32.00</td>
+              <td data-sort-value="2.50" data-sort-kind="number">Save £2.50</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a href="https://www.vivino.com/en/search?q=Chateau%20Malescasse" target="_blank" rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="***" data-sort-kind="text">***</td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[domaine moillard-thomas santenay rouge 2022/23](https://www.majestic.co.uk/wines/moillard-santenay-63084)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/moillard-santenay-63084" target="_blank" rel="noreferrer"
+                  >Domaine Moillard-Thomas Santenay Rouge 2022/23</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="32.00" data-sort-kind="number">£32.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[bread &amp; butter reserve pinot noir 2021/22, russian river valley](https://www.majestic.co.uk/wines/bread-butter-res-pn-58030)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/bread-butter-res-pn-58030" target="_blank" rel="noreferrer"
+                  >Bread &amp; Butter Reserve Pinot Noir 2021/22, Russian River Valley</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="33.00" data-sort-kind="number">£33.00</td>
+              <td data-sort-value="7.00" data-sort-kind="number">Save £7.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Bread%20%26%20Butter%20Reserve%20Pinot%20Noir%202021/22%2C%20Russian%20River%20Valley"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[ciabot berton barolo docg 2020/21](https://www.majestic.co.uk/wines/barolo-13677)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/barolo-13677" target="_blank" rel="noreferrer"
+                  >Ciabot Berton Barolo DOCG 2020/21</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="33.00" data-sort-kind="number">£33.00</td>
+              <td data-sort-value="3.00" data-sort-kind="number">Save £3.00</td>
+              <td data-sort-value="3.9" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Ciabot%20Berton%20Barolo%20DOCG%202020/21"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.9</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[chateau de pizay &#x27;la centenaire&#x27; morgon 2022/23](https://www.majestic.co.uk/wines/morgon-la-centenaire-chateau-de-pizay-07225)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/morgon-la-centenaire-chateau-de-pizay-07225"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Chateau de Pizay &#x27;La Centenaire&#x27; Morgon 2022/23</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="34.00" data-sort-kind="number">£34.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Chateau%20de%20Pizay%20%27La%20Centenaire%27%20Morgon%202022/23"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[tenuta dell&#x27;ornellaia ‘le volte’ 2022/23, tuscany](https://www.majestic.co.uk/wines/le-volte-dell-ornellaia-13181)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/le-volte-dell-ornellaia-13181"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Tenuta dell&#x27;Ornellaia ‘Le Volte’ 2022/23, Tuscany</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="34.00" data-sort-kind="number">£34.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Tenuta%20dell%27Ornellaia%20%E2%80%98Le%20Volte%E2%80%99%202022/23%2C%20Tuscany"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[bread &amp; butter reserve cabernet sauvignon 2021, napa valley](https://www.majestic.co.uk/wines/bread-butter-reserve-napa-cs-58019)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/bread-butter-reserve-napa-cs-58019"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Bread &amp; Butter Reserve Cabernet Sauvignon 2021, Napa Valley</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="35.00" data-sort-kind="number">£35.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Bread%20%26%20Butter%20Reserve%20Cabernet%20Sauvignon%202021%2C%20Napa%20Valley"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[dog point pinot noir 2020/21, marlborough](https://www.majestic.co.uk/wines/dog-point-pinot-noir-37300)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/dog-point-pinot-noir-37300" target="_blank" rel="noreferrer"
+                  >Dog Point Pinot Noir 2020/21, Marlborough</a
+                >
+              </td>
+              <td data-sort-value="new zealand" data-sort-kind="text">New Zealand</td>
+              <td data-sort-value="35.00" data-sort-kind="number">£35.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Dog%20Point%20Pinot%20Noir%202020/21%2C%20Marlborough"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[pauillac de lynch-moussas, bordeaux 2019](https://www.majestic.co.uk/wines/pauillac-de-lynch-moussas-61971)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/pauillac-de-lynch-moussas-61971"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Pauillac de Lynch-Moussas, Bordeaux 2019</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="35.00" data-sort-kind="number">£35.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Pauillac%20de%20Lynch-Moussas%2C%20Bordeaux%202019"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[alias de croizet-bages pauillac, bordeaux, 2016](https://www.majestic.co.uk/wines/alias-de-croizet-bages-pauillac-61972)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/alias-de-croizet-bages-pauillac-61972"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Alias de Croizet-Bages Pauillac, Bordeaux, 2016</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="36.00" data-sort-kind="number">£36.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[bodegas roda rioja reserva 2018/21](https://www.majestic.co.uk/wines/roda-rioja-reserva-2012-14710)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/roda-rioja-reserva-2012-14710"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Bodegas Roda Rioja Reserva 2018/21</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="36.00" data-sort-kind="number">£36.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.3" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Bodegas%20Roda%20Rioja%20Reserva%202018/21"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.3</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[duckhorn &#x27;decoy&#x27; merlot 2021/22, north coast](https://www.majestic.co.uk/wines/decoy-merlot-18014)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/decoy-merlot-18014" target="_blank" rel="noreferrer"
+                  >Duckhorn &#x27;Decoy&#x27; Merlot 2021/22, North Coast</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="36.00" data-sort-kind="number">£36.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[duckhorn &#x27;decoy&#x27; zinfandel 2021/22, north coast](https://www.majestic.co.uk/wines/decoy-zinfandel-18935)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/decoy-zinfandel-18935" target="_blank" rel="noreferrer"
+                  >Duckhorn &#x27;Decoy&#x27; Zinfandel 2021/22, North Coast</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="36.00" data-sort-kind="number">£36.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[muga &#x27;selección especial&#x27; rioja reserva 2020/21](https://www.majestic.co.uk/wines/rioja-reserva-seleccin-especial-14297)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/rioja-reserva-seleccin-especial-14297"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Muga &#x27;Selección Especial&#x27; Rioja Reserva 2020/21</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="36.00" data-sort-kind="number">£36.00</td>
+              <td data-sort-value="6.00" data-sort-kind="number">Save £6.00</td>
+              <td data-sort-value="4.3" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Muga%20%27Selecci%C3%B3n%20Especial%27%20Rioja%20Reserva%202020/21"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.3</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[penfolds &#x27;kalimna bin 28&#x27; shiraz 2022/23, australia](https://www.majestic.co.uk/wines/penfolds-bin-28-kalimna-shiraz-19094)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/penfolds-bin-28-kalimna-shiraz-19094"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Penfolds &#x27;Kalimna Bin 28&#x27; Shiraz 2022/23, Australia</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="36.00" data-sort-kind="number">£36.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Penfolds%20%27Kalimna%20Bin%2028%27%20Shiraz%202022/23%2C%20Australia"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[vasse felix premier cabernet sauvignon 2021/22, margaret river](https://www.majestic.co.uk/wines/vasse-felix-prem-cab-sauv-59902)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/vasse-felix-prem-cab-sauv-59902"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Vasse Felix Premier Cabernet Sauvignon 2021/22, Margaret River</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="36.00" data-sort-kind="number">£36.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Vasse%20Felix%20Premier%20Cabernet%20Sauvignon%202021/22%2C%20Margaret%20River"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[au bon climat santa barbara pinot noir 2023/24, california](https://www.majestic.co.uk/wines/au-bon-climat-santa-barbara-pn-58714)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/au-bon-climat-santa-barbara-pn-58714"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Au Bon Climat Santa Barbara Pinot Noir 2023/24, California</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Au%20Bon%20Climat%20Santa%20Barbara%20Pinot%20Noir%202023/24%2C%20California"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château de sales 2014/17, pomerol](https://www.majestic.co.uk/wines/chateau-de-sales-pomerol-61315)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/chateau-de-sales-pomerol-61315"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Château de Sales 2014/17, Pomerol</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Ch%C3%A2teau%20de%20Sales%202014/17%2C%20Pomerol"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[domaine de thalabert crozes-hermitage 2015/18](https://www.majestic.co.uk/wines/crozes-hermitage-thalabert-06640)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/crozes-hermitage-thalabert-06640"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Domaine de Thalabert Crozes-Hermitage 2015/18</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Domaine%20de%20Thalabert%20Crozes-Hermitage%202015/18"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[famille perrin ‘les chemins des mulets’ châteauneuf-du-pape 2022/23](https://www.majestic.co.uk/wines/chemin-des-mulets-cdnp-perrin-06332)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/chemin-des-mulets-cdnp-perrin-06332"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Famille Perrin ‘Les Chemins des Mulets’ Châteauneuf-du-Pape 2022/23</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="4.00" data-sort-kind="number">Save £4.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Famille%20Perrin%20%E2%80%98Les%20Chemins%20des%20Mulets%E2%80%99%20Ch%C3%A2teauneuf-du-Pape%202022/23"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[la rioja alta &#x27;viña ardanza&#x27; rioja reserva 2019/20](https://www.majestic.co.uk/wines/rioja-reserva-vina-ardanza-la-rioja-alta-14270)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/rioja-reserva-vina-ardanza-la-rioja-alta-14270"
+                  target="_blank"
+                  rel="noreferrer"
+                  >La Rioja Alta &#x27;Viña Ardanza&#x27; Rioja Reserva 2019/20</a
+                >
+              </td>
+              <td data-sort-value="spain" data-sort-kind="text">Spain</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.3" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=La%20Rioja%20Alta%20%27Vi%C3%B1a%20Ardanza%27%20Rioja%20Reserva%202019/20"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.3</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[louis latour marsannay rouge 2023/24, burgundy](https://www.majestic.co.uk/wines/marsannay-2018-louis-latour-burgundy-63033)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/marsannay-2018-louis-latour-burgundy-63033"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Louis Latour Marsannay Rouge 2023/24, Burgundy</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="3.8" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Louis%20Latour%20Marsannay%20Rouge%202023/24%2C%20Burgundy"
+                  target="_blank"
+                  rel="noreferrer"
+                  >3.8</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[madame de beaucaillou 2020/21, haut-médoc](https://www.majestic.co.uk/wines/madame-de-beaucaillou-19-61413)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/madame-de-beaucaillou-19-61413"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Madame de Beaucaillou 2020/21, Haut-Médoc</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[piccini brunello di montalcino docg 2019/20](https://www.majestic.co.uk/wines/brunello-mondocg-piccini-73115)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/brunello-mondocg-piccini-73115"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Piccini Brunello di Montalcino DOCG 2019/20</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="6.00" data-sort-kind="number">Save £6.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[pieropan ‘ruberpan’ organic valpolicella superiore doc 2021/22](https://www.majestic.co.uk/wines/pieropan-ruberpan-organic-73045)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/pieropan-ruberpan-organic-73045"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Pieropan ‘Ruberpan’ Organic Valpolicella Superiore DOC 2021/22</a
+                >
+              </td>
+              <td data-sort-value="italy" data-sort-kind="text">Italy</td>
+              <td data-sort-value="37.00" data-sort-kind="number">£37.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.0" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Pieropan%20%E2%80%98Ruberpan%E2%80%99%20Organic%20Valpolicella%20Superiore%20DOC%202021/22"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.0</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[peter lehmann &#x27;the barossan&#x27; shiraz 2019 magnum, barossa](https://www.majestic.co.uk/wines/p-lehmann-barossan-shiraz-mag-59238)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/p-lehmann-barossan-shiraz-mag-59238"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Peter Lehmann &#x27;The Barossan&#x27; Shiraz 2019 Magnum, Barossa</a
+                >
+              </td>
+              <td data-sort-value="australia" data-sort-kind="text">Australia</td>
+              <td data-sort-value="37.99" data-sort-kind="number">£37.99</td>
+              <td data-sort-value="15.00" data-sort-kind="number">Save £15.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[catena zapata &#x27;catena alta&#x27; malbec 2021/22, mendoza](https://www.majestic.co.uk/wines/catena-alta-malbec-40025)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/catena-alta-malbec-40025" target="_blank" rel="noreferrer"
+                  >Catena Zapata &#x27;Catena Alta&#x27; Malbec 2021/22, Mendoza</a
+                >
+              </td>
+              <td data-sort-value="argentina" data-sort-kind="text">Argentina</td>
+              <td data-sort-value="38.00" data-sort-kind="number">£38.00</td>
+              <td data-sort-value="7.00" data-sort-kind="number">Save £7.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Catena%20Zapata%20%27Catena%20Alta%27%20Malbec%202021/22%2C%20Mendoza"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[charmes de kirwan margaux 2019/20](https://www.majestic.co.uk/wines/charmes-de-kirwan-61218)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/charmes-de-kirwan-61218" target="_blank" rel="noreferrer"
+                  >Charmes de Kirwan Margaux 2019/20</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="39.00" data-sort-kind="number">£39.00</td>
+              <td data-sort-value="5.00" data-sort-kind="number">Save £5.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Charmes%20de%20Kirwan%20Margaux%202019/20"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[vik milla cala 2020/21, cachapoal valley](https://www.majestic.co.uk/wines/vik-milla-cala-39431)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/vik-milla-cala-39431" target="_blank" rel="noreferrer"
+                  >VIK Milla Cala 2020/21, Cachapoal Valley</a
+                >
+              </td>
+              <td data-sort-value="chile" data-sort-kind="text">Chile</td>
+              <td data-sort-value="39.00" data-sort-kind="number">£39.00</td>
+              <td data-sort-value="6.00" data-sort-kind="number">Save £6.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=VIK%20Milla%20Cala%202020/21%2C%20Cachapoal%20Valley"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château meyney 2013/2017, saint-estèphe](https://www.majestic.co.uk/wines/chateau-meyney-st-estephe-61223)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/chateau-meyney-st-estephe-61223"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Château Meyney 2013/2017, Saint-Estèphe</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="40.00" data-sort-kind="number">£40.00</td>
+              <td data-sort-value="6.00" data-sort-kind="number">Save £6.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Ch%C3%A2teau%20Meyney%202013/2017%2C%20Saint-Est%C3%A8phe"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[château batailley &#x27;lions de batailley&#x27; 2018/19, pauillac](https://www.majestic.co.uk/wines/lions-de-batailley-pauillac-61313)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/lions-de-batailley-pauillac-61313"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Château Batailley &#x27;Lions de Batailley&#x27; 2018/19, Pauillac</a
+                >
+              </td>
+              <td data-sort-value="france" data-sort-kind="text">France</td>
+              <td data-sort-value="42.00" data-sort-kind="number">£42.00</td>
+              <td data-sort-value="10.00" data-sort-kind="number">Save £10.00</td>
+              <td data-sort-value="4.1" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Ch%C3%A2teau%20Batailley%20%27Lions%20de%20Batailley%27%202018/19%2C%20Pauillac"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.1</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[parcel series no.75 cabernet sauvignon, napa valley](https://www.majestic.co.uk/wines/ps-napa-cab-sauv-2022-58043)"
+                data-sort-kind="text"
+              >
+                <a href="https://www.majestic.co.uk/wines/ps-napa-cab-sauv-2022-58043" target="_blank" rel="noreferrer"
+                  >Parcel Series No.75 Cabernet Sauvignon, Napa Valley</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="42.00" data-sort-kind="number">£42.00</td>
+              <td data-sort-value="22.00" data-sort-kind="number">Save £22.00</td>
+              <td data-sort-value="" data-sort-kind="number">?</td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+            <tr>
+              <td
+                data-sort-value="[beringer &#x27;knights valley&#x27; cabernet sauvignon 2019/20, sonoma county](https://www.majestic.co.uk/wines/beringer-knights-valley-napa-cabernet-2015-18134)"
+                data-sort-kind="text"
+              >
+                <a
+                  href="https://www.majestic.co.uk/wines/beringer-knights-valley-napa-cabernet-2015-18134"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Beringer &#x27;Knights Valley&#x27; Cabernet Sauvignon 2019/20, Sonoma County</a
+                >
+              </td>
+              <td data-sort-value="usa" data-sort-kind="text">USA</td>
+              <td data-sort-value="43.00" data-sort-kind="number">£43.00</td>
+              <td data-sort-value="10.00" data-sort-kind="number">Save £10.00</td>
+              <td data-sort-value="4.2" data-sort-kind="number">
+                <a
+                  href="https://www.vivino.com/en/search?q=Beringer%20%27Knights%20Valley%27%20Cabernet%20Sauvignon%202019/20%2C%20Sonoma%20County"
+                  target="_blank"
+                  rel="noreferrer"
+                  >4.2</a
+                >
+              </td>
+              <td data-sort-value="" data-sort-kind="text"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script>
+      (() => {
+        const table = document.getElementById("summary-table");
+        const headers = Array.from(table.querySelectorAll("th button.sort-button"));
+        const tbody = table.tBodies[0];
+        let activeColumn = -1;
+        let ascending = true;
+
+        function compareCells(left, right, kind) {
+          if (kind === "number") {
+            const leftValue = left === "" ? Number.POSITIVE_INFINITY : Number(left);
+            const rightValue = right === "" ? Number.POSITIVE_INFINITY : Number(right);
+            return leftValue - rightValue;
+          }
+
+          return left.localeCompare(right, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          });
+        }
+
+        function sortByColumn(columnIndex) {
+          const header = headers[columnIndex];
+          const kind = tbody.rows[0]?.cells[columnIndex]?.dataset.sortKind ?? "text";
+          const nextAscending = activeColumn === columnIndex ? !ascending : true;
+          const rows = Array.from(tbody.rows);
+
+          rows.sort((leftRow, rightRow) => {
+            const leftCell = leftRow.cells[columnIndex];
+            const rightCell = rightRow.cells[columnIndex];
+            const result = compareCells(
+              leftCell.dataset.sortValue ?? leftCell.textContent.trim(),
+              rightCell.dataset.sortValue ?? rightCell.textContent.trim(),
+              kind,
+            );
+            return nextAscending ? result : -result;
+          });
+
+          tbody.replaceChildren(...rows);
+          activeColumn = columnIndex;
+          ascending = nextAscending;
+
+          headers.forEach((button, index) => {
+            if (index === columnIndex) {
+              button.dataset.direction = nextAscending ? "asc" : "desc";
+              button.setAttribute("aria-sort", nextAscending ? "ascending" : "descending");
+            } else {
+              delete button.dataset.direction;
+              button.removeAttribute("aria-sort");
+            }
+          });
+        }
+
+        headers.forEach((button, index) => {
+          button.addEventListener("click", () => sortByColumn(index));
+        });
+      })();
+    </script>
+  </body>
+</html>

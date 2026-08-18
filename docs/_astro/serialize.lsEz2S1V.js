@@ -1,0 +1,1 @@
+import{t as a}from"./js-yaml.0CFEwj-C.js";var t=r=>Array.isArray(r)?r.map(e=>t(e)):r!==null&&typeof r=="object"?Object.entries(r).reduce((e,[u,n])=>(n!==null&&(e[u]=t(n)),e),{}):r,l=r=>{const e=t(r);return a(e,{indent:2,sortKeys:!0,lineWidth:-1,noRefs:!0,skipInvalid:!0})};export{l as t};
