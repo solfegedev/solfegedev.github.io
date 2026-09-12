@@ -1,0 +1,1 @@
+var a=()=>{const o=new URL("https://api8016.solfegeai.com"),t=globalThis.location?.hostname;return o.hostname==="localhost"&&t&&t!=="localhost"&&(o.hostname=t),o.toString().replace(/\/+$/,"")},e=a();export{e as t};

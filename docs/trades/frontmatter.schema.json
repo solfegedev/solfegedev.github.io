@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "cleaner",
+        "decorator",
+        "electrician",
+        "handyman",
+        "locksmith",
+        "plumber"
+      ]
+    },
+    "recommended_by": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "phone": {
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "area": {
+      "type": "string",
+      "minLength": 1
+    },
+    "last_used_year": {
+      "type": "integer",
+      "minimum": 1000,
+      "maximum": 9999
+    },
+    "verified_date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "recommended_by"
+  ],
+  "additionalProperties": false,
+  "title": "Trades frontmatter",
+  "description": "Frontmatter metadata for one tradesperson markdown file."
+}
